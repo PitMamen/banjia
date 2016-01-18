@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--顶部菜单-->
+    <include layout="@layout/fragment_home_head" />
+
+    <!--开源ScrollView-->
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--头部广告Banner-->
+            <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+                android:id="@+id/vp_home"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <!--中间跳转菜单-->
+            <include layout="@layout/fragment_home_group" />
+
+            <!--分隔符-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#dedada" />
+
+            <!--中间今日最新-->
+            <include layout="@layout/fragment_home_tody_new" />
+
+            <!--底部商品ListView-->
+            <ListView
+                android:id="@+id/home_pull_refresh_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:divider="#00000000"
+                android:dividerHeight="5dp"
+                android:smoothScrollbar="true"></ListView>
+
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>

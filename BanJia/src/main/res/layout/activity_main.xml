@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+    android:id="@+id/fl_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/vp_main"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"></android.support.v4.view.ViewPager>-->
+
+    <RadioGroup
+        android:id="@+id/rg_activity"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/btn_red"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/bottom_button1"
+            android:text="@string/catetitle" />
+
+        <RadioButton
+            android:id="@+id/rb_brand"
+            style="@style/btn_red"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/bottom_button2"
+            android:text="@string/brandsell" />
+
+
+        <RadioButton
+            android:id="@+id/rb_category"
+            style="@style/btn_red"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/bottom_button3"
+            android:text="@string/search_by_category" />
+
+
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/btn_red"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/bottom_button4"
+            android:text="@string/mine" />
+
+    </RadioGroup>
+
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="CustomWindowTitleBackground">
+        <item name="android:background">@color/title_red</item>
+    </style>
+    <style name="toptitle" parent="@android:style/Theme">
+        <item name="android:windowTitleSize">0.0dip</item>
+    </style>
+    <style name="loading_dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/transpant_bg</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="loading_dialog1" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/transpant_bg</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="dialog" parent="@style/loading_dialog">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <style name="window_dialog_dismiss">
+        <item name="android:windowExitAnimation">@anim/dialog_dismiss</item>
+    </style>
+    <style name="line_c">
+        <item name="android:background">#ffe0e0e0</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1.0dip</item>
+    </style>
+    <style name="lines">
+        <item name="android:background">#ffe0e0e0</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+    <style name="line_bar">
+        <item name="android:background">@color/bgf6</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">10.0dip</item>
+    </style>
+    <style name="red_square">
+        <item name="android:background">@color/title_red</item>
+        <item name="android:layout_width">4.0dip</item>
+        <item name="android:layout_height">15.0dip</item>
+    </style>
+    <style name="product_dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/transpant_bg</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="share_dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/transpant_bg</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="btn_red">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@drawable/text_color_category_filter</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingTop">12.0dip</item>
+        <item name="android:paddingBottom">12.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+    </style>
+    <style name="popupWindowPane_bottom">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_from_bottom</item>
+    </style>
+    <style name="CalendarTitle">
+        <item name="android:textSize">@dimen/calendar_text_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CalendarCell">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="CalendarCell.DayHeader" parent="@style/CalendarCell">
+        <item name="android:textSize">@dimen/calendar_text_medium</item>
+    </style>
+    <style name="CalendarCell.CalendarDate" parent="@style/CalendarCell">
+        <item name="android:textSize">@dimen/calendar_text_medium</item>
+        <item name="android:clickable">true</item>
+    </style>
+</resources>

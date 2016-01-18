@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="最新上线"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_new"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_yesterday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="昨日上线"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_yesterday"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="最后疯抢"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_last"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_gril"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="精致女装"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_gril"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_shoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="鞋包配饰"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_shoes"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_life"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="居家生活"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_life"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_beauty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="美妆个护"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_beauty"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="美食零食"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_food"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_baby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="母婴用品"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_baby"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_appliance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="家电数码"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_appliance"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="精品男装"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_man"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_brand_head_item_sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:text="文体用品"
+            android:textColor="@drawable/selector_brand_head"
+            android:layout_gravity="center_vertical"/>
+
+        <ImageView
+            android:id="@+id/iv_brand_head_item_sports"
+            android:layout_width="72dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/red"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

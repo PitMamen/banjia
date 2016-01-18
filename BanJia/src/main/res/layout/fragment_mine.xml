@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/fragment_mine_head_unlogin" />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_taobao_dingdan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/usericon_order"
+        app:tv_custom="淘宝订单">
+
+    </com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_taobao_wuliu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/usericon_address"
+        app:tv_custom="淘宝物流信息">
+
+    </com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_taobao_gouwuche"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/usericon_shoppingcart"
+        app:tv_custom="淘宝购物车">
+
+    </com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/usericon_collects"
+        app:tv_custom="我的收藏">
+
+    </com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#ccc9c9" />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_qiandao"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/usericon_sign"
+        app:tv_custom="签到领积分">
+
+    </com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_wode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/usericon_integral"
+        app:tv_custom="我的积分">
+
+    </com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_jifen_mall"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/usericon_mall"
+        app:tv_custom="积分商城">
+
+    </com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+</LinearLayout>

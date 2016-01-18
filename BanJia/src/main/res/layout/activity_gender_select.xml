@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/title_red"
+        android:gravity="center"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:text="请选择您的性别，为您私人定制更合适的商品"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        />
+
+    <RadioGroup
+        android:id="@+id/rg_gender_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_gender_select_girl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/id_girl"
+            android:gravity="center" />
+        <RadioButton
+            android:id="@+id/rb_gender_select_boy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/id_man"
+            android:gravity="center" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="美女" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="帅哥" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_gender_select_confirm"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:background="@color/title_red"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_brand_sale"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:scrollbars="none">
+
+        <RadioGroup
+            android:id="@+id/rg_brand_head"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_new"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:checked="true"
+                android:text="最新上线"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_yesterday"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="昨日上线"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_last"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="最后疯抢"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_gril"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="精致女装"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_shoes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="鞋包配饰"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_life"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="居家生活"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_beauty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="美妆个护"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_food"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="美食零食"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_baby"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="母婴用品"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_appliances"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="家电数码"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_man"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="精品男装"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+            <RadioButton
+                android:id="@+id/rb_brand_head_sports"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:button="@null"
+                android:text="问题用品"
+                android:textColor="@drawable/selector_brand_head"
+                android:textSize="18sp"/>
+
+        </RadioGroup>
+
+    </HorizontalScrollView>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/ptrLv_brand_sale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

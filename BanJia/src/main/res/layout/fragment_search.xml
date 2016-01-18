@@ -1,0 +1,304 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.max.jacentsao.banjia.fragment.SearchFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rlayOutKey1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/title_red"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:height="50dp"
+                    android:background="@drawable/border_corners_search">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="2dp"
+                        android:src="@mipmap/ic_search" />
+
+                    <TextView
+                        android:id="@id/searchKey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:height="40dp"
+                        android:gravity="center_vertical"
+                        android:hint="寻找商品"
+                        android:textColorHint="@color/borderline"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@id/bigclass_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="10dp">
+
+                <LinearLayout
+                    android:id="@id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3.0">
+
+                    <RadioButton
+                        android:id="@id/radio_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/fushi"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="女装"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@id/radio_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/nanzhuang"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="男装"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@id/radio_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/jujia"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="居家"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3.0">
+
+                    <RadioButton
+                        android:id="@id/radio_4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/muying"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="母婴"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@id/radio_5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/xiebao"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="鞋包"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@id/radio_14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/nieyi"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="内衣"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3.0">
+
+                    <RadioButton
+                        android:id="@id/radio_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/meishi"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="美食"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@id/radio_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/shuma"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="数码家电"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@id/radio_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/peishi"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="配饰"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="3.0">
+
+                    <RadioButton
+                        android:id="@id/radio_9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/huazhuangpin"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="美妆个护"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@id/radio_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/wenti"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="文体"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@id/radio_13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="8dp"
+                        android:drawableTop="@mipmap/oldman"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="0dp"
+                        android:paddingTop="12dp"
+                        android:text="中老年"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#8e8585"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:background="@color/red"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="赚更多积分"
+            android:gravity="center_vertical"
+            />
+        <Button
+            android:id="@+id/btn_bonus_point_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="积分说明"
+            android:gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:background="#00000000"
+            android:textColor="@color/gray"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_invite_friends"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/checkin_invit"
+        app:tv_custom="邀请好友注册"></com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_first_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/checkin_newuser"
+        app:tv_custom="首次登陆"></com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <com.max.jacentsao.banjia.customview.CustomLinearLayout
+        android:id="@+id/ll_friday_double_bonus"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:iv_custom="@mipmap/checkin_present"
+        app:tv_custom="每周五签到五倍积分"></com.max.jacentsao.banjia.customview.CustomLinearLayout>
+
+</LinearLayout>

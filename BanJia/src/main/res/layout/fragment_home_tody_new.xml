@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_home_today_new"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:scaleType="fitXY"
+        android:clickable="true"
+        android:src="@mipmap/jky_jzsbdzdg" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_home_fancy_female_cloth"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:scaleType="fitXY"
+            android:clickable="true"
+            android:src="@mipmap/jky_jzsbdzdg" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_home_worth_discount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:src="@mipmap/jky_jzsbdzdg" />
+
+            <ImageView
+                android:id="@+id/iv_home_delicious_food"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:clickable="true"
+                android:src="@mipmap/jky_jzsbdzdg" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

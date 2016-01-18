@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.max.jacentsao.banjia"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.github.itsmechlark:android-sliding-menu:1.0.1'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile files('libs/GoogleAdMobAdsSdk-6.4.1.jar')
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile files('libs/android-support-v4.jar')
+    compile 'com.prolificinteractive:material-calendarview:1.1.0'
+    compile('cn.trinea.android.view.autoscrollviewpager:android-auto-scroll-view-pager:1.1.2') {
+        exclude module: 'support-v4'
+    }
+    compile project(':pulltorefresh-lib')
+    compile project(':xUtils_source_lib')
+}

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_select_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+
+        <RadioButton
+            android:id="@+id/rb_home_shoes_bags"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_m_xiebao"
+            android:gravity="center"
+            android:text="鞋包" />
+
+
+        <RadioButton
+            android:id="@+id/rb_home_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_m_jujia"
+            android:gravity="center"
+            android:text="居家" />
+
+
+        <RadioButton
+            android:id="@+id/rb_home_electrics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_m_meizhuang"
+            android:gravity="center"
+            android:text="美妆个护" />
+
+        <RadioButton
+            android:id="@+id/rb_home_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@mipmap/ic_m_all"
+            android:gravity="center"
+            android:text="更多" />
+    </RadioGroup>
+</LinearLayout>
