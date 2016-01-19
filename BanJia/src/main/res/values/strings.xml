@@ -52,6 +52,7 @@
     <string name="logint_forgot_password">忘记密码？</string>
     <string name="logint_error_password">密码错误</string>
     <string name="register">注册</string>
+    <string name="default_order">默认</string>
     <string name="register_hint">半价特卖账号注册</string>
     <string name="register_input_phone">请输入手机号</string>
     <string name="register_check_phone">手机号格式错误（为11位数字）</string>
@@ -90,6 +91,7 @@
     <string name="update_nickname_success">修改昵称成功</string>
     <string name="camera">拍照</string>
     <string name="select_local_pick">选择本地图片</string>
+    <string name="filtrate">筛选</string>
     <string name="affirm">确定</string>
     <string name="brandsell">品牌特卖</string>
     <string name="search_by_category">分类搜索</string>
@@ -157,8 +159,50 @@
     <string name="content_new_version">检测到新版本可更新,是否下载更新?</string>
     <string name="repeat_exit_tip">再按一次在后台运行</string>
     <string name="NotifyOK">"确定"</string>
+    <string name="sales_volume">销量</string>
+    <string name="price">价格</string>
+    <string name="latest">最新</string>
+    <string name="favor">收藏</string>
     <string name="NotifyCancel">"取消"</string>
     <string name="tip_apk_download">AppUpgradeDemo.apk 正在下载...</string>
     <string name="download_begin">开始下载</string>
     <string name="about_banjia">  全网超值正品特卖，真正值得买的1-5折畅销商品。来自天猫、亚马逊、京东、一号店、当当，最新上线的特卖商品。通过商品包；爆料、 商品比价、商品搜索，全网正品最低价一网打尽！服饰、数码家电、鞋包、美妆个护、居家、母婴等，应有尽有。半价特卖，让你总是抢先买到超值正品! 多块好省！数千万购物达人们的必备应用</string>
+    <string name="female_cloth">女装</string>
+    <array name="all_category">
+        <item>全部</item>
+        <item>女装</item>
+        <item>全部女装</item>
+        <item>上衣</item>
+        <item>裤裙</item>
+        <item>内衣</item>
+        <item>套装</item>
+        <item>男装</item>
+        <item>居家</item>
+        <item>套装</item>
+        <item>男装</item>
+        <item>居家</item>
+        <item>母婴</item>
+        <item>鞋包</item>
+        <item>配饰</item>
+        <item>美食</item>
+        <item>数码家电</item>
+        <item>美妆个护</item>
+        <item>文体</item>
+        <item>中老年</item>
+    </array>
+
+    <array name="category_search">
+        <item>女装</item>
+        <item>男装</item>
+        <item>居家</item>
+        <item>母婴</item>
+        <item>鞋包</item>
+        <item>内衣</item>
+        <item>美食</item>
+        <item>数码家电</item>
+        <item>配饰</item>
+        <item>美妆个护</item>
+        <item>文体</item>
+        <item>中老年</item>
+    </array>
 </resources>

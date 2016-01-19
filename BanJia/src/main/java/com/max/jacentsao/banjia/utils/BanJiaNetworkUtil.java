@@ -151,4 +151,16 @@ public class BanJiaNetworkUtil {
     public void getBannerDetailList(Map<String, Object> params, final RequestDataCallback callback){
         doPost(Constants.PRODUCT_LIST, params, callback);
     }
+
+    /**
+     * 分类展示页面的ListView产品
+     *
+     * @param params
+     * @param callback
+     */
+    public void getCategoryShowList(Map<String, Object> params, final RequestDataCallback callback) {
+        doPost(Constants.PRODUCT_LIST, params, callback);
+    }
+
+
 }

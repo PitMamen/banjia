@@ -2,7 +2,9 @@ package com.max.jacentsao.banjia.activity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -11,6 +13,7 @@ import android.widget.ImageButton;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ContentView;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.max.jacentsao.banjia.R;
 
 /**
@@ -28,6 +31,7 @@ public class ProductDetailActivity extends AppCompatActivity {
 
     @ViewInject(R.id.ib_product_detail_click)
     private ImageButton ibClick;
+    private AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,9 @@ public class ProductDetailActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        builder = new AlertDialog.Builder(this);
+        builder.setView(R.layout.dialog_share_favor);
+
         String productUrl = getIntent().getStringExtra("productUrl");
 //        webView.loadUrl(productUrl);
 //        webView.setWebViewClient(new WebViewClient(){
@@ -70,5 +77,10 @@ public class ProductDetailActivity extends AppCompatActivity {
         };
 
         webView.setWebViewClient(client);
+    }
+
+    @OnClick(R.id.ib_product_detail_click)
+    public void shareOrFavor(View view){
+        builder.show();
     }
 }

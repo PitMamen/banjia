@@ -48,7 +48,8 @@
         <activity android:name=".activity.BonusMallActivity" />
         <activity android:name=".activity.BonusExplainActivity" />
         <activity android:name=".activity.BannerShowActivity" />
-        <activity android:name=".activity.ProductDetailActivity"></activity>
+        <activity android:name=".activity.ProductDetailActivity" />
+        <activity android:name=".activity.CategoryListShowActivity"></activity>
     </application>
 
 </manifest>

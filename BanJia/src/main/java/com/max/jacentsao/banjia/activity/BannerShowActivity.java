@@ -1,8 +1,11 @@
 package com.max.jacentsao.banjia.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
@@ -39,12 +42,14 @@ public class BannerShowActivity extends AppCompatActivity {
     @ViewInject(R.id.pull_refresh_scrollview_banner)
     private PullToRefreshScrollView pullRefreshScrollView;
 
-    private Map<String,Object> params = new HashMap<>();
+    private Map<String, Object> params = new HashMap<>();
     private int currentPage = 1;
     private int position;
     private HomeProductListAdapter homeProductListAdapter;
     //存放ListView数据
     private List<HomeListProduct.RowsEntity> list = new ArrayList<>();
+
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,13 +60,30 @@ public class BannerShowActivity extends AppCompatActivity {
     }
 
     private void initViews() {
+
+        //设置加载ProgressDialog
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("正在加载，请稍后~~");
+        progressDialog.setCancelable(false);
+        progressDialog.setCanceledOnTouchOutside(false);
+
         Intent intent = getIntent();
         position = intent.getIntExtra("position", 0);
         String bannerImageUrl = intent.getStringExtra("bannerImageUrl");
 
-        GlobalApplication.getApp().getImageLoader().displayImage(bannerImageUrl,ivBannerListHead,GlobalApplication.getApp().getImageOptions());
+        GlobalApplication.getApp().getImageLoader().displayImage(bannerImageUrl, ivBannerListHead, GlobalApplication.getApp().getImageOptions());
         homeProductListAdapter = new HomeProductListAdapter(this);
         bannerListView.setAdapter(homeProductListAdapter);
+        bannerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String productUrl = list.get(position).getProductUrl();
+                Intent intent = new Intent(BannerShowActivity.this, ProductDetailActivity.class);
+                intent.putExtra("productUrl", productUrl);
+                startActivity(intent);
+
+            }
+        });
 
         pullRefreshScrollView.setMode(PullToRefreshBase.Mode.BOTH);
         pullRefreshScrollView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ScrollView>() {
@@ -83,9 +105,10 @@ public class BannerShowActivity extends AppCompatActivity {
 
 
     /**
-     *加载Banner跳转数据
+     * 加载Banner跳转数据
      */
     private void loadDatas() {
+        progressDialog.show();
         params.put("act", "getproductlist");
         params.put("pages", currentPage);
         params.put("bc", 0);
@@ -96,7 +119,7 @@ public class BannerShowActivity extends AppCompatActivity {
         params.put("tbclass", 0);
         params.put("brandid", 0);
         params.put("v", 31);
-        switch (position){
+        switch (position) {
             case 0:
                 params.put("actid", 21);
                 break;
@@ -127,6 +150,7 @@ public class BannerShowActivity extends AppCompatActivity {
             }
         });
     }
+
     private void hidenRresh() {
         if (pullRefreshScrollView.isRefreshing()) {
             //设置延迟隐藏刷新提示
@@ -134,6 +158,15 @@ public class BannerShowActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     pullRefreshScrollView.onRefreshComplete();
+                }
+            }, 1000);
+        }
+        if (progressDialog.isShowing()) {
+            //设置延迟隐藏刷新提示
+            pullRefreshScrollView.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    progressDialog.dismiss();
                 }
             }, 1000);
         }

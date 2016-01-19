@@ -23,6 +23,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.lidroid.xutils.view.annotation.event.OnClick;
 import com.lidroid.xutils.view.annotation.event.OnRadioGroupCheckedChange;
 import com.max.jacentsao.banjia.R;
+import com.max.jacentsao.banjia.activity.CategoryListShowActivity;
 import com.max.jacentsao.banjia.activity.ProductDetailActivity;
 import com.max.jacentsao.banjia.activity.SignInActivity;
 import com.max.jacentsao.banjia.adapter.BannerListAdapter;
@@ -170,7 +171,7 @@ public class FragmentHome extends Fragment {
             }
         });
 
-        pullToRefreshScrollView.scrollTo(0,0);
+        pullToRefreshScrollView.scrollTo(0, 0);
         pullToRefreshScrollView.setMode(PullToRefreshBase.Mode.BOTH);
         pullToRefreshScrollView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ScrollView>() {
             @Override
@@ -192,81 +193,98 @@ public class FragmentHome extends Fragment {
     }
 
     /**
-     *首页搜索菜单，点击跳转到搜索界面
+     * 首页搜索菜单，点击跳转到搜索界面
+     *
      * @param view
      */
     @OnClick(R.id.image_search)
-    public void search(View view){
+    public void search(View view) {
 
     }
 
     /**
-     *首页签到菜单，点击跳转到签到界面
+     * 首页签到菜单，点击跳转到签到界面
+     *
      * @param view
      */
     @OnClick(R.id.image_qiandao)
-    public void signIn(View view){
+    public void signIn(View view) {
         startActivity(new Intent(getActivity(), SignInActivity.class));
     }
 
 
-
     /**
      * 首页鞋包，居家，数码家电，更多跳转界面
+     *
      * @param radioGroup
      * @param checkedId
      */
     @OnRadioGroupCheckedChange(R.id.rg_select_type)
-    public void choiceProductType(RadioGroup radioGroup, int checkedId){
-        switch (checkedId){
-            case R.id.rb_home_home:
-
-                break;
-
+    public void choiceProductType(RadioGroup radioGroup, int checkedId) {
+        Intent intent = new Intent();
+        String bc = null;
+        switch (checkedId) {
             case R.id.rb_home_shoes_bags:
+                bc = 5 + "";
+                intent.setClass(getActivity(), CategoryListShowActivity.class);
+                intent.putExtra("bc",bc);
+                startActivity(intent);
                 break;
-
+            case R.id.rb_home_home:
+                bc = 3 + "";
+                intent.setClass(getActivity(), CategoryListShowActivity.class);
+                intent.putExtra("bc",bc);
+                startActivity(intent);
+                break;
             case R.id.rb_home_electrics:
+                bc = 9 + "";
+                intent.setClass(getActivity(), CategoryListShowActivity.class);
+                intent.putExtra("bc",bc);
+                startActivity(intent);
                 break;
-
-            case R.id.rb_home_more:
+            default:
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment,new FragmentSearch()).commit();
                 break;
         }
     }
 
     /**
      * 首页超值折扣
+     *
      * @param view
      */
     @OnClick(R.id.iv_home_worth_discount)
-    public void worthDiscount(View view){
+    public void worthDiscount(View view) {
 
     }
 
     /**
      * 首页美味零食
+     *
      * @param view
      */
     @OnClick(R.id.iv_home_delicious_food)
-    public void deliciousFood(View view){
+    public void deliciousFood(View view) {
 
     }
 
     /**
      * 首页精品女装
+     *
      * @param view
      */
     @OnClick(R.id.iv_home_fancy_female_cloth)
-    public void fancyFemaleCloth(View view){
+    public void fancyFemaleCloth(View view) {
 
     }
 
     /**
      * 首页今日更新
+     *
      * @param view
      */
     @OnClick(R.id.iv_home_today_new)
-    public void todayNew(View view){
+    public void todayNew(View view) {
 
     }
 
@@ -359,7 +377,7 @@ public class FragmentHome extends Fragment {
                 if (homeListProduct != null && homeListProduct.getRows() != null) {
                     List<HomeListProduct.RowsEntity> rows = homeListProduct.getRows();
                     list.addAll(rows);
-                    homeProductListAdapter.addDatas(list);
+                    homeProductListAdapter.addDatas(rows);
                     hidenRresh();
                     ListViewHeightCalculateUtil.setListViewHeightBasedOnChildren(lvHomePoductList);
                 }
