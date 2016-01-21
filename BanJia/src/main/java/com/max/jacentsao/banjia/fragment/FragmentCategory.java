@@ -95,7 +95,7 @@ public class FragmentCategory extends BaseFragment {
 
 
     public void loadDatas() {
-        progressDialog.show();
+//        progressDialog.show();
         Bundle arguments = getArguments();
         params.put("act", "getproductlist");
         params.put("pages", currentPage);
