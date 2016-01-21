@@ -2,7 +2,6 @@ package com.max.jacentsao.banjia.activity;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
@@ -46,7 +45,7 @@ public class CategoryListShowActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewUtils.inject(this);
-        requestAlertWindowPermission();
+//        requestAlertWindowPermission();
         initViews();
     }
 
@@ -64,14 +63,14 @@ public class CategoryListShowActivity extends BaseActivity {
         viewPager.setAdapter(adapter);
     }
 
-    /**
-     * 点击选择类别
-     * @param view
-     */
-    @OnClick(R.id.tv_category_show_category)
-    public void selectCategory(View view) {
-
-    }
+//    /**
+//     * 点击选择类别
+//     * @param view
+//     */
+//    @OnClick(R.id.tv_category_show_category)
+//    public void selectCategory(View view) {
+//
+//    }
 
     /**
      * 点击选择过滤器
@@ -108,14 +107,14 @@ public class CategoryListShowActivity extends BaseActivity {
         startActivityForResult(intent, REQUEST_CODE);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == REQUEST_CODE) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                if (Settings.canDrawOverlays(this)) {
-                }
-            }
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (requestCode == REQUEST_CODE) {
+//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//                if (Settings.canDrawOverlays(this)) {
+//                }
+//            }
+//        }
+//    }
 }
