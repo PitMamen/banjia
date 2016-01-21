@@ -4,7 +4,6 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +29,7 @@ import com.max.jacentsao.banjia.adapter.BannerListAdapter;
 import com.max.jacentsao.banjia.adapter.HomeProductListAdapter;
 import com.max.jacentsao.banjia.application.GlobalApplication;
 import com.max.jacentsao.banjia.module.Banner;
+import com.max.jacentsao.banjia.module.CategorySearchEvent;
 import com.max.jacentsao.banjia.module.HomeListProduct;
 import com.max.jacentsao.banjia.module.HomeTodayNew;
 import com.max.jacentsao.banjia.utils.BanJiaNetworkUtil;
@@ -46,12 +46,13 @@ import java.util.List;
 import java.util.Map;
 
 import cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager;
+import de.greenrobot.event.EventBus;
 
 /**
  * Created by JacenTsao on 2016/1/11.
  * 加载首页数据
  */
-public class FragmentHome extends Fragment {
+public class FragmentHome extends BaseFragment {
     //当前页码
     private int currentPage = 1;
 
@@ -116,13 +117,14 @@ public class FragmentHome extends Fragment {
     private ImageView ivSearch;
 
     private ProgressDialog progressDialog;
+    private Intent intent;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ViewUtils.inject(this, view);
-
+//        EventBus.getDefault().register(this);
         return view;
     }
 
@@ -136,6 +138,9 @@ public class FragmentHome extends Fragment {
     }
 
     private void initViews(View view) {
+        //跳转到按类别展示商品列表界面
+        intent = new Intent(getActivity(),CategoryListShowActivity.class);
+
         //设置加载ProgressDialog
         progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("正在加载，请稍后~~");
@@ -188,18 +193,15 @@ public class FragmentHome extends Fragment {
             }
 
         });
-
-
     }
 
     /**
      * 首页搜索菜单，点击跳转到搜索界面
-     *
      * @param view
      */
     @OnClick(R.id.image_search)
     public void search(View view) {
-
+        EventBus.getDefault().post(new CategorySearchEvent("hello"));
     }
 
     /**
@@ -222,28 +224,47 @@ public class FragmentHome extends Fragment {
     @OnRadioGroupCheckedChange(R.id.rg_select_type)
     public void choiceProductType(RadioGroup radioGroup, int checkedId) {
         Intent intent = new Intent();
-        String bc = null;
+        String bc;
         switch (checkedId) {
             case R.id.rb_home_shoes_bags:
                 bc = 5 + "";
                 intent.setClass(getActivity(), CategoryListShowActivity.class);
-                intent.putExtra("bc",bc);
+                intent.putExtra("bc", bc);
                 startActivity(intent);
                 break;
             case R.id.rb_home_home:
                 bc = 3 + "";
                 intent.setClass(getActivity(), CategoryListShowActivity.class);
-                intent.putExtra("bc",bc);
+                intent.putExtra("bc", bc);
                 startActivity(intent);
                 break;
             case R.id.rb_home_electrics:
                 bc = 9 + "";
                 intent.setClass(getActivity(), CategoryListShowActivity.class);
-                intent.putExtra("bc",bc);
+                intent.putExtra("bc", bc);
                 startActivity(intent);
                 break;
             default:
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment,new FragmentSearch()).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment, new FragmentSearch()).commit();
+                break;
+        }
+    }
+
+    /**
+     * 中间今日更新四张图片的点击事件
+     *
+     * @param view
+     */
+    @OnClick({R.id.iv_home_worth_discount, R.id.iv_home_delicious_food, R.id.iv_home_fancy_female_cloth, R.id.iv_home_today_new})
+    public void onImageClicked(View view) {
+        switch (view.getId()) {
+            case R.id.iv_home_worth_discount:
+                break;
+            case R.id.iv_home_delicious_food:
+                break;
+            case R.id.iv_home_fancy_female_cloth:
+                break;
+            case R.id.iv_home_today_new:
                 break;
         }
     }
@@ -255,7 +276,8 @@ public class FragmentHome extends Fragment {
      */
     @OnClick(R.id.iv_home_worth_discount)
     public void worthDiscount(View view) {
-
+        intent.putExtra("bc",1);
+        startActivity(intent);
     }
 
     /**
@@ -265,7 +287,8 @@ public class FragmentHome extends Fragment {
      */
     @OnClick(R.id.iv_home_delicious_food)
     public void deliciousFood(View view) {
-
+        intent.putExtra("bc",1);
+        startActivity(intent);
     }
 
     /**
@@ -275,7 +298,8 @@ public class FragmentHome extends Fragment {
      */
     @OnClick(R.id.iv_home_fancy_female_cloth)
     public void fancyFemaleCloth(View view) {
-
+        intent.putExtra("bc",1);
+        startActivity(intent);
     }
 
     /**
@@ -285,7 +309,8 @@ public class FragmentHome extends Fragment {
      */
     @OnClick(R.id.iv_home_today_new)
     public void todayNew(View view) {
-
+        intent.putExtra("bc",1);
+        startActivity(intent);
     }
 
     /**
@@ -424,4 +449,11 @@ public class FragmentHome extends Fragment {
 
         }
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+    }
+
+
 }

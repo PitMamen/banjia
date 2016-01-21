@@ -3,7 +3,6 @@ package com.max.jacentsao.banjia.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,7 +17,7 @@ import com.max.jacentsao.banjia.adapter.SearchRecyclerViewAdapter;
 /**
  * Created by Administrator on 2016/1/13.
  */
-public class FragmentSearch extends Fragment {
+public class FragmentSearch extends BaseFragment {
 
     @ViewInject(R.id.recycler_view_search)
     private RecyclerView recyclerView;

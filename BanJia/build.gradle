@@ -38,4 +38,5 @@ dependencies {
     compile project(':pulltorefresh-lib')
     compile project(':xUtils_source_lib')
     compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'de.greenrobot:eventbus:3.0.0-beta1'
 }

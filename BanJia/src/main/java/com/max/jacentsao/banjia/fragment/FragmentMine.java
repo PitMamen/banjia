@@ -3,7 +3,6 @@ package com.max.jacentsao.banjia.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +24,7 @@ import com.max.jacentsao.banjia.customview.CustomLinearLayout;
  * 我的 界面
  * Created by JacenTsao on 2016/1/11.
  */
-public class FragmentMine extends Fragment {
+public class FragmentMine extends BaseFragment {
     private static final int REQUEST_CODE = 1111;
     //设置按钮
     @ViewInject(R.id.iv_setting)

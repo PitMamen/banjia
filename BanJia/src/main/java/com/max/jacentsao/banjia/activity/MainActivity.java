@@ -1,7 +1,6 @@
 package com.max.jacentsao.banjia.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
 
 import com.lidroid.xutils.ViewUtils;
@@ -12,19 +11,24 @@ import com.max.jacentsao.banjia.fragment.FragmentBrandSale;
 import com.max.jacentsao.banjia.fragment.FragmentHome;
 import com.max.jacentsao.banjia.fragment.FragmentMine;
 import com.max.jacentsao.banjia.fragment.FragmentSearch;
+import com.max.jacentsao.banjia.module.CategorySearchEvent;
 
+import de.greenrobot.event.EventBus;
+import de.greenrobot.event.Subscribe;
+
+/**
+ * 主Activity
+ */
 @ContentView(R.layout.activity_main)
-public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
-
-//    @ViewInject(R.id.vp_main)
-//    private ViewPager viewPager;
+public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 
     @ViewInject(R.id.rg_activity)
     private RadioGroup radioGroup;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        EventBus.getDefault().register(this);
         ViewUtils.inject(this);
         initViews();
     }
@@ -36,19 +40,31 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
-        switch (checkedId){
+        switch (checkedId) {
             case R.id.rb_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment,new FragmentHome()).commit();
+                fragmentManager(R.id.fl_fragment, FragmentHome.class);
                 break;
             case R.id.rb_brand:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment,new FragmentBrandSale()).commit();
+                fragmentManager(R.id.fl_fragment, FragmentBrandSale.class);
                 break;
             case R.id.rb_category:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment,new FragmentSearch()).commit();
+                fragmentManager(R.id.fl_fragment, FragmentSearch.class);
                 break;
             case R.id.rb_mine:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fl_fragment,new FragmentMine()).commit();
+                fragmentManager(R.id.fl_fragment, FragmentMine.class);
                 break;
         }
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }
+
+    @Subscribe
+    public void onEventMainThread(CategorySearchEvent event) {
+        radioGroup.getChildAt(2).performClick();
     }
 }
